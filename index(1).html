@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naresh Kumar N — Creative Portfolio</title>
+<meta name="description" content="Portfolio of Naresh Kumar N — Senior Graphic Designer, Video Editor, Social Media Creative and AI Visual Creator.">
+<style>
+:root{
+  --bg:#0d0e10; --panel:#15171a; --soft:#202328; --text:#f5f5f2;
+  --muted:#a9adb3; --accent:#ff6b21; --line:#2a2d32; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(13,14,16,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-1px;font-size:22px}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;font-size:14px;color:#c8cbd0}.nav-links a:hover{color:var(--accent)}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:90px;background:
+ radial-gradient(circle at 78% 35%,rgba(255,107,33,.16),transparent 28%),
+ radial-gradient(circle at 15% 80%,rgba(255,107,33,.08),transparent 25%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.kicker{color:var(--accent);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(48px,7vw,86px);line-height:.95;letter-spacing:-4px;max-width:800px}
+h1 span{color:var(--accent)}
+.hero-copy{font-size:19px;color:var(--muted);max-width:650px;margin:28px 0}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:13px 21px;border-radius:999px;font-weight:800;border:1px solid var(--line);display:inline-block}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#111}.btn.secondary:hover{border-color:var(--accent)}
+.hero-card{background:linear-gradient(145deg,#1b1d21,#111214);border:1px solid #2a2d32;border-radius:30px;padding:34px;box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.avatar{width:170px;height:170px;border-radius:50%;margin-bottom:25px;border:7px solid var(--accent);object-fit:cover;background:#292c30}
+.hero-card h2{font-size:28px}.hero-card p{color:var(--muted);margin-top:6px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.tag{padding:7px 11px;background:#22252a;border-radius:999px;font-size:12px;color:#ddd}
+section{padding:105px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:42px}
+.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}
+h2.section-title{font-size:44px;line-height:1.05;letter-spacing:-2px;margin-top:8px}
+.section-intro{color:var(--muted);max-width:520px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:30px}
+.card p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.stat{padding:22px;background:#111316;border-radius:17px;border:1px solid var(--line)}.stat strong{display:block;font-size:30px;color:var(--accent)}.stat span{font-size:12px;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service{min-height:190px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:26px;transition:.25s}
+.service:hover{transform:translateY(-5px);border-color:var(--accent)}
+.service .num{color:var(--accent);font-weight:900}.service h3{margin:25px 0 8px;font-size:21px}.service p{color:var(--muted);font-size:14px}
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project{position:relative;overflow:hidden;border-radius:24px;min-height:320px;background:linear-gradient(135deg,#24272c,#141619);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;justify-content:end}
+.project:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(255,107,33,.38),transparent 30%),linear-gradient(135deg,transparent 45%,rgba(255,255,255,.04));}
+.project>*{position:relative}.project .type{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:2px}.project h3{font-size:30px;margin:8px 0}.project p{color:#c2c5c9;max-width:460px}
+.timeline{border-left:1px solid var(--line);margin-left:8px}.job{position:relative;padding:0 0 35px 30px}.job:before{content:"";position:absolute;left:-7px;top:6px;width:13px;height:13px;background:var(--accent);border-radius:50%}.job .date{color:var(--accent);font-size:12px;font-weight:800}.job h3{font-size:23px;margin:4px 0}.job p,.job li{color:var(--muted);font-size:14px}.job ul{margin:10px 0 0 18px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:14px}.skill{background:var(--panel);border:1px solid var(--line);padding:17px 20px;border-radius:16px;display:flex;justify-content:space-between}.skill span{color:var(--muted)}
+.contact{background:linear-gradient(135deg,#1a1c20,#111214);border:1px solid var(--line);border-radius:28px;padding:55px;display:flex;align-items:center;justify-content:space-between;gap:40px}.contact p{color:var(--muted);margin-top:10px}.contact-links{display:flex;flex-direction:column;gap:10px;color:#ddd}
+footer{padding:30px 0;color:#777;font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:850px){
+ .nav-links{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-card{max-width:500px}
+ .services,.work{grid-template-columns:1fr}.skills{grid-template-columns:1fr}
+ .section-head{display:block}.section-intro{margin-top:14px}.contact{display:block;padding:35px}.contact-links{margin-top:25px}
+ h1{letter-spacing:-2px}
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner">
+<a class="logo" href="#home">NARESH<span>.</span></a>
+<div class="nav-links">
+<a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+</div></div></nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+<div>
+<div class="kicker">Senior Creative Professional</div>
+<h1>Designing ideas into <span>impactful visuals.</span></h1>
+<p class="hero-copy">Graphic Designer • Video Editor • Social Media Creative • AI Visual Creator. 8+ years of experience creating visual communication across print, digital marketing, social media, video and AI-assisted creative production.</p>
+<div class="buttons"><a class="btn primary" href="#work">View My Work</a><a class="btn secondary" href="#contact">Let's Connect</a></div>
+</div>
+<div class="hero-card">
+<div class="avatar" aria-label="Profile photo placeholder"></div>
+<h2>Naresh Kumar N</h2><p>Graphic Designer & Visual Creative</p>
+<div class="tags"><span class="tag">Branding</span><span class="tag">Print</span><span class="tag">Video</span><span class="tag">Motion</span><span class="tag">Social Media</span><span class="tag">Generative AI</span></div>
+</div>
+</div></section>
+
+<section id="about"><div class="container">
+<div class="section-head"><div><div class="eyebrow">01 / About</div><h2 class="section-title">Creative thinking.<br>Visual execution.</h2></div><p class="section-intro">A multidisciplinary creative profile built around clear communication, strong visual systems and campaign-ready design.</p></div>
+<div class="about-grid">
+<div class="card"><p>Creative and detail-oriented Graphic Designer with 8+ years of experience crafting visually compelling designs that captivate audiences and elevate brand identities. Adept at translating complex concepts into clear, engaging visuals across print and digital media.</p><div class="stats"><div class="stat"><strong>8+</strong><span>Years Experience</span></div><div class="stat"><strong>2</strong><span>Magazine Editions</span></div><div class="stat"><strong>360°</strong><span>Creative Skills</span></div></div></div>
+<div class="card"><p>Specialized in branding and visual communication, digital marketing creatives, social media campaigns, video editing, reels, motion graphics, print advertising, brochures, magazines, academic campaign creatives, creative coordination and AI-assisted production.</p></div>
+</div></div></section>
+
+<section id="services"><div class="container">
+<div class="section-head"><div><div class="eyebrow">02 / Services</div><h2 class="section-title">What I create.</h2></div></div>
+<div class="services">
+<div class="service"><span class="num">01</span><h3>Brand & Graphic Design</h3><p>Branding, visual communication, posters, banners, flyers, brochures, magazines and campaign systems.</p></div>
+<div class="service"><span class="num">02</span><h3>Video & Motion</h3><p>Video editing, reels, teaser content, text animation and motion graphics for digital campaigns.</p></div>
+<div class="service"><span class="num">03</span><h3>Social Media Creative</h3><p>Platform-ready creative concepts and campaign assets designed for consistent digital communication.</p></div>
+<div class="service"><span class="num">04</span><h3>AI Visuals</h3><p>AI image generation, AI illustration, prompt design, AI video generation and AI-assisted content creation.</p></div>
+<div class="service"><span class="num">05</span><h3>Print Design</h3><p>Marketing collateral, print advertising, publication layouts and production-ready creative artwork.</p></div>
+<div class="service"><span class="num">06</span><h3>Creative Direction</h3><p>Concept development, visual consistency and coordination of creative outputs across campaigns.</p></div>
+</div></div></section>
+
+<section id="work"><div class="container">
+<div class="section-head"><div><div class="eyebrow">03 / Selected Work</div><h2 class="section-title">Projects that tell<br>a visual story.</h2></div><p class="section-intro">Replace these showcase cards with your final project thumbnails, videos or case-study links.</p></div>
+<div class="work">
+<div class="project"><span class="type">Publication Design</span><h3>THE ROOT — Magazine</h3><p>Designed and developed two complete editions with visual direction, page design, typography and creative layouts.</p></div>
+<div class="project"><span class="type">Digital Campaign</span><h3>Education Campaigns</h3><p>Creative systems for academic programs, admissions, social media and digital marketing communication.</p></div>
+<div class="project"><span class="type">Video & Motion</span><h3>Reels & Promotional Videos</h3><p>Short-form video editing, motion graphics, text animation, teasers and campaign videos.</p></div>
+<div class="project"><span class="type">AI Creative</span><h3>Generative Visuals</h3><p>AI-assisted visual concepts, image generation, illustration, thumbnails and video-generation workflows.</p></div>
+</div></div></section>
+
+<section id="experience"><div class="container">
+<div class="section-head"><div><div class="eyebrow">04 / Experience</div><h2 class="section-title">Professional journey.</h2></div></div>
+<div class="timeline">
+<div class="job"><div class="date">2021 — PRESENT</div><h3>Graphic Designer — BASE Educational Services</h3><ul><li>Branding and visual communication</li><li>Digital marketing creatives and social media campaigns</li><li>Video editing, reels and motion graphics</li><li>Print advertising, brochures and magazines</li><li>Campaign creatives for academic programs</li><li>Creative coordination across centres</li><li>AI-assisted creative production</li></ul></div>
+<div class="job"><div class="date">2018 — 2021</div><h3>Designer — A1 Xerox Center</h3><p>Graphic design experience across print-oriented creative production and customer-facing design requirements.</p></div>
+</div></div></section>
+
+<section><div class="container">
+<div class="section-head"><div><div class="eyebrow">05 / Toolkit</div><h2 class="section-title">Tools & skills.</h2></div></div>
+<div class="skills">
+<div class="skill"><b>CorelDRAW</b><span>Design</span></div><div class="skill"><b>Adobe Photoshop</b><span>Design</span></div>
+<div class="skill"><b>Adobe Illustrator</b><span>Design</span></div><div class="skill"><b>Adobe Premiere Pro</b><span>Video</span></div>
+<div class="skill"><b>Adobe After Effects</b><span>Motion</span></div><div class="skill"><b>Canva</b><span>Digital</span></div>
+<div class="skill"><b>AI Image Generation</b><span>AI</span></div><div class="skill"><b>Prompt Design</b><span>AI</span></div>
+<div class="skill"><b>AI Video Generation</b><span>AI</span></div><div class="skill"><b>Social Media Creative</b><span>Marketing</span></div>
+</div></div></section>
+
+<section id="contact"><div class="container">
+<div class="contact"><div><div class="eyebrow">06 / Contact</div><h2 class="section-title">Let's create something<br>great together.</h2><p>Available for creative collaborations, design projects and visual communication work.</p></div>
+<div class="contact-links"><a href="mailto:rohit46447@gmail.com">rohit46447@gmail.com</a><a href="tel:+919035406354">+91 90354 06354</a><span>Bangalore, Karnataka</span></div></div>
+</div></section>
+</main>
+<footer><div class="container">© 2026 Naresh Kumar N. All rights reserved.</div></footer>
+</body>
+</html>
